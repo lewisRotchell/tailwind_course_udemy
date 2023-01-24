@@ -6,6 +6,192 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+
+        mobileMenuIcon.addEventListener("click", () => {
+          mobileMenuIcon.classList.toggle("open");
+        });
+
+        const ticketsMenuItem = document.getElementById("tickets-menu-item");
+
+        ticketsMenuItem.addEventListener("click", () => {
+          ticketsMenuItem.classList.toggle("open");
+        });
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <header class="text-zinc-200">
+        <nav
+          class="sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
+        >
+          <div class="flex items-center gap-2 p-2">
+            <img src="./assets/images/logo-inverted.png" width="50" alt="" />
+            <div class="text-2xl font-bold">
+              tw:<span class="text-sky-900">mf</span>
+            </div>
+          </div>
+          <div class="block pr-4 my-auto ml-auto cursor-pointer md:hidden">
+            <div id="mobile-menu-button" class="group peer">
+              <div
+                class="relative top-0 w-8 h-1 transition-all rounded-full bg-zinc-200 group-open:top-2 group-open:rotate-45"
+              ></div>
+              <div
+                class="w-8 h-1 mt-1 transition-all rounded-full opacity-100 bg-zinc-200 group-open:opacity-0"
+              ></div>
+              <div
+                class="relative top-0 w-8 h-1 mt-1 transition-all rounded-full bg-zinc-200 group-open:-top-2 group-open:-rotate-45"
+              ></div>
+            </div>
+            <div
+              class="absolute left-0 top-[62px] hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
+            >
+              <nav>
+                <ul>
+                  <li class="h-full">
+                    <a
+                      class="relative flex items-center justify-center h-full p-4 font-bold text-pink-200 transition-colors cursor-pointer hover:bg-white/10 hover:text-zinc-200"
+                      href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="h-full">
+                    <a
+                      class="relative flex items-center justify-center h-full p-4 font-bold text-pink-200 transition-colors cursor-pointer hover:bg-white/10 hover:text-zinc-200"
+                      href="#"
+                      >Lineup</a
+                    >
+                  </li>
+                  <li
+                    class="h-full text-pink-200 transition-colors cursor-pointer hover:bg-white/10 hover:text-zinc-200"
+                  >
+                    <button
+                      id="tickets-menu-item"
+                      class="relative w-full h-full p-4 font-bold peer"
+                    >
+                      Tickets
+                    </button>
+                    <ul class="hidden peer-open:block">
+                      <li>
+                        <a
+                          class="relative block p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
+                          href="#"
+                          >Single Day Ticket</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="relative block p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
+                          href="#"
+                          >7 Day Ticket</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="h-full">
+                    <a
+                      class="relative flex items-center justify-center h-full p-4 font-bold text-pink-200 transition-colors cursor-pointer hover:bg-white/10 hover:text-zinc-200"
+                      href="#"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <ul class="items-center justify-end flex-1 hidden md:flex">
+            <li class="h-full">
+              <a class="menu-item" href="#">Home</a>
+            </li>
+            <li class="h-full">
+              <a class="menu-item" href="#">Lineup</a>
+            </li>
+            <li class="h-full menu-item group">
+              <a class="" href="#">Tickets</a>
+              <ul
+                class="absolute right-0 hidden text-right bg-pink-500 top-full whitespace-nowrap rounded-b-md group-hover:block"
+              >
+                <li>
+                  <a
+                    class="block p-4 font-bold text-pink-200 transition-colors ease-in-out cursor-pointer hover:bg-white/5 hover:text-zinc-200"
+                    href="#"
+                    >Single Day Ticket</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block p-4 font-bold text-pink-200 transition-colors ease-in-out cursor-pointer hover:bg-white/5 hover:text-zinc-200"
+                    href="#"
+                    >7 day ticket</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="h-full">
+              <a class="menu-item" href="#">Support</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- hero section -->
+        <div
+          style="background-image: url(./assets/images/hero.jpg)"
+          class="flex h-[calc(100vh-200px)] min-h-[400px] flex-col items-center justify-center bg-cover bg-fixed bg-center"
+        >
+          <div
+            class="px-4 py-2 text-center rounded-xl bg-white/30 backdrop-blur-md"
+          >
+            <div class="relative">
+              <img src="./assets/images/logo.png" width="175" alt="" />
+              <div class="mt-[-70px] mb-5 flex items-center justify-center">
+                <div
+                  class="flex items-center justify-center gap-1 bg-pink-500 rounded-full h-14 w-14"
+                >
+                  <div
+                    class="w-1 h-2 bg-pink-300 rounded-full animate-wavey"
+                  ></div>
+                  <div
+                    class="w-1 h-3 bg-pink-200 rounded-full animate-wavey animation-delay-200"
+                  ></div>
+                  <div
+                    class="h-4 w-1 animate-wavey rounded-full bg-pink-100 animation-delay-[150ms]"
+                  ></div>
+                  <div
+                    class="w-1 h-3 bg-pink-200 rounded-full animate-wavey animation-delay-300"
+                  ></div>
+                  <div
+                    class="h-2 w-1 animate-wavey rounded-full bg-pink-300 animation-delay-[750ms]"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="text-5xl font-bold">
+              tw:<span class="text-sky-900">mf</span>
+            </div>
+          </div>
+          <div class="mt-3 text-sm font-bold">
+            Keep me updated with news and promotions
+          </div>
+          <form class="flex gap-2 mt-3">
+            <input
+              class="p-2 font-bold border rounded-sm border-white/40 bg-white/30 text-sky-900 placeholder-zinc-500 caret-pink-500 outline-pink-500 backdrop-blur-md focus:outline-2 focus:outline-solid"
+              type="email"
+              name=""
+              placeholder="email"
+              id=""
+            />
+            <button
+              type="submit"
+              class="px-4 py-2 font-bold transition-colors bg-pink-500 cursor-pointer rounded-small hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </header>
+    </main>
+  </body>
 </html>
